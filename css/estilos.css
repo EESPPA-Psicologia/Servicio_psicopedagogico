@@ -9,7 +9,13 @@
 }
 /* ============ 2) DISEÑO GENERAL ============ */
 *{box-sizing:border-box}
-body{margin:0;font-family:var(--letra-texto);color:var(--tinta);background:#fff;line-height:1.6}
+body{
+  margin:0;
+  font-family:var(--letra-texto);
+  color:var(--tinta);
+  background:#fbf6f1;
+  line-height:1.6;
+}
 h1,h2,h3{font-family:var(--letra-titulos);line-height:1.2}
 .cabecera{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 24px;background:var(--acento)}
 .marca{display:flex;align-items:center;gap:10px;color:#fff;font-family:var(--letra-titulos);font-size:1.25rem;font-weight:bold;text-decoration:none}
@@ -17,7 +23,28 @@ h1,h2,h3{font-family:var(--letra-titulos);line-height:1.2}
 .menu{display:flex;flex-wrap:wrap;gap:4px 14px}
 .menu a{color:#fff;text-decoration:none;padding:4px 2px;font-size:.95rem}
 .menu a:hover,.menu a:focus-visible,.menu a.activo{border-bottom:3px solid #fff;outline:none}
-.hero{display:flex;flex-wrap:wrap;align-items:center;gap:32px;padding:64px 24px;background:var(--tinte)}
+
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:32px;
+  padding:76px 5%;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      #ead5d8 0,
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #fbf6f1,
+      #f3e7e3
+    );
+  position:relative;
+  overflow:hidden;
+}
+
 .hero>div:first-child{flex:1 1 380px}
 .hero h1{font-size:clamp(2rem,5vw,3.1rem);margin:8px 0 16px;color:var(--acento)}
 .hero p{max-width:55ch;font-size:1.1rem}
