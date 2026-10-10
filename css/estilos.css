@@ -72,3 +72,10 @@ a.tarjeta:hover,a.tarjeta:focus-visible{filter:brightness(.96)}
 /* Bienvenida */
 .bienvenida{background:#fff;padding:28px;border-left:6px solid var(--acento);border-radius:6px;margin-bottom:24px}
 .bienvenida h2{margin-top:0;color:var(--acento)}
+
+/* Menú blanco con logo */
+.cabecera{background:#fff;border-bottom:6px solid var(--acento);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.marca{color:var(--acento)}
+.marca img{height:68px;width:auto}
+.menu a{color:var(--secundario);font-weight:600}
+.menu a:hover,.menu a:focus-visible,.menu a.activo{color:var(--acento);border-bottom:3px solid var(--acento)}
