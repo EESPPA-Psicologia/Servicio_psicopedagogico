@@ -79,3 +79,35 @@ a.tarjeta:hover,a.tarjeta:focus-visible{filter:brightness(.96)}
 .marca img{height:68px;width:auto}
 .menu a{color:var(--secundario);font-weight:600}
 .menu a:hover,.menu a:focus-visible,.menu a.activo{color:var(--acento);border-bottom:3px solid var(--acento)}
+
+
+/* ===== COLORES MÁS VIVOS Y DINÁMICOS ===== */
+:root{--guinda-oscuro:#5e1424}
+body{background:#f4f4f5}
+
+/* Portada en guinda intenso */
+.hero{background:linear-gradient(135deg,#8a2033 0%,#5e1424 100%);min-height:70vh}
+.hero h1,.hero p{color:#fff}
+.hero .etiqueta{color:#fff;opacity:.85;text-transform:uppercase;letter-spacing:.05em;font-size:.85rem}
+.hero .boton{background:#fff;color:var(--acento)}
+.hero .boton:hover{background:#f1e4e7}
+.hero .boton.secundario{background:transparent;border-color:#fff;color:#fff}
+.hero .boton.secundario:hover{background:rgba(255,255,255,.18)}
+.hero-img img{background:#fff;padding:14px;border-radius:20px;mix-blend-mode:normal;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+
+/* Títulos con detalle */
+.bloque h1::after{content:"";display:block;width:70px;height:5px;margin-top:10px;background:var(--secundario);border-radius:3px}
+
+/* Tarjetas blancas con movimiento */
+.tarjeta{background:#fff;border-left:none;border-top:5px solid var(--acento);box-shadow:0 4px 14px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
+.tarjeta:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(138,32,51,.25)}
+a.tarjeta:hover,a.tarjeta:focus-visible{filter:none}
+
+/* Botones sólidos */
+.boton{background:var(--acento);color:#fff;transition:transform .15s,background .15s}
+.boton:hover,.boton:focus-visible{background:#a82a42;transform:translateY(-2px);filter:none}
+.boton.secundario{background:transparent;color:var(--acento)}
+.boton.secundario:hover{background:var(--acento);color:#fff}
+
+/* Pie de página */
+.pie{background:var(--guinda-oscuro)}
