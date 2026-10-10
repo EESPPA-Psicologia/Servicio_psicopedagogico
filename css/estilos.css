@@ -66,3 +66,9 @@ a.tarjeta:hover,a.tarjeta:focus-visible{filter:brightness(.96)}
 .nota{font-size:.9rem;opacity:.7}
 .pie{padding:24px;background:var(--secundario);color:#fff;font-size:.95rem}
 .pie p{margin:4px 0}
+/* Imagen de portada */
+.hero-img{flex:0 1 320px;text-align:center}
+.hero-img img{display:block;max-width:100%;height:auto;margin:0 auto;mix-blend-mode:multiply}
+/* Bienvenida */
+.bienvenida{background:#fff;padding:28px;border-left:6px solid var(--acento);border-radius:6px;margin-bottom:24px}
+.bienvenida h2{margin-top:0;color:var(--acento)}
