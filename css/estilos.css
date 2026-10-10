@@ -28,6 +28,7 @@ h1,h2,h3{font-family:var(--letra-titulos);line-height:1.2}
   display:flex;
   flex-wrap:wrap;
   align-items:center;
+  min-height:90vh;
   gap:32px;
   padding:76px 5%;
   background:
