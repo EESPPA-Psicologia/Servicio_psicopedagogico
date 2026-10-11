@@ -128,3 +128,11 @@ html{scroll-behavior:smooth}
   .whatsapp::after{font-size:.95rem}
   .whatsapp svg{width:32px;height:32px}
 }
+
+
+/* ===== ARREGLO: WHATSAPP FLOTANDO Y SIN DESBORDE LATERAL ===== */
+html{background:radial-gradient(circle at 100% 0,#a52b42 0 210px,transparent 211px),radial-gradient(circle at 0 100%,#7a1a2c 0 220px,transparent 221px),var(--acento);background-attachment:fixed}
+body::before,body::after{display:none}
+img,iframe{max-width:100%}
+.whatsapp{position:fixed!important;right:16px!important;left:auto;top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;margin:0;z-index:2147483000}
+@media(max-width:600px){.sello{right:6px}}
