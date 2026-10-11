@@ -96,3 +96,12 @@ html{scroll-behavior:smooth}
   .js .aparece.visible{animation:none}
   .sello{animation:none}
 }
+
+
+/* ===== BOTÓN DE WHATSAPP ===== */
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:50;width:64px;height:64px;border-radius:50%;background:#25d366;border:3px solid var(--oscuro);box-shadow:4px 4px 0 var(--oscuro);display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.whatsapp svg{width:34px;height:34px;fill:#fff}
+.whatsapp:hover,.whatsapp:focus-visible{transform:translate(-2px,-2px) scale(1.06);outline:none}
+@keyframes latido{0%,100%{box-shadow:4px 4px 0 var(--oscuro),0 0 0 0 rgba(37,211,102,.5)}50%{box-shadow:4px 4px 0 var(--oscuro),0 0 0 14px rgba(37,211,102,0)}}
+.whatsapp{animation:latido 2.6s infinite}
+@media (prefers-reduced-motion:reduce){.whatsapp{animation:none}}
