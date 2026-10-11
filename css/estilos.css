@@ -77,3 +77,22 @@ iframe{width:100%;margin-top:12px;border:3px solid var(--oscuro)!important;borde
   .sello{width:88px;height:88px;top:-18px;right:-6px;font-size:.7rem}
   .bloque{padding:24px}
 }
+
+
+/* ===== MOVIMIENTO E INTERACCIÓN ===== */
+@keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes flota{0%,100%{transform:rotate(10deg) translateY(0)}50%{transform:rotate(6deg) translateY(-8px)}}
+.js .aparece:not(.visible){opacity:0}
+.js .aparece.visible{animation:subir .6s ease backwards}
+.sello{animation:flota 4s ease-in-out infinite}
+.foto{transition:transform .25s}
+.foto.acuarela:hover{transform:rotate(-1deg) scale(1.04)}
+.foto.logo:hover{transform:rotate(1deg) scale(1.04)}
+.boton:active{transform:translate(2px,2px);box-shadow:none}
+html{scroll-behavior:smooth}
+.titulo-seccion{color:#fff;margin:32px 0 0;font-size:clamp(1.6rem,3.5vw,2.2rem)}
+@media (prefers-reduced-motion:reduce){
+  .js .aparece:not(.visible){opacity:1}
+  .js .aparece.visible{animation:none}
+  .sello{animation:none}
+}
