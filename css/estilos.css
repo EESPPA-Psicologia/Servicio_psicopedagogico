@@ -148,3 +148,7 @@ h1,h2,h3,p{overflow-wrap:anywhere}
   .hero{grid-template-columns:minmax(0,1fr)}
   .sello{right:8px;top:-14px}
 }
+
+
+/* ===== SERVICIOS EN DOS COLUMNAS ===== */
+.tarjetas.dos{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
