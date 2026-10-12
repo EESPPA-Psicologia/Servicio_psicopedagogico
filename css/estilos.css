@@ -177,3 +177,11 @@ h1,h2,h3,p{overflow-wrap:anywhere}
 .hero-img .video-wrap{grid-column:1 / -1}
 .video-card{transform:rotate(-1.5deg)}
 .video-card:hover,.video-card:focus-visible{transform:rotate(0) scale(1.03)}
+
+
+/* ===== SELLO "UN ESPACIO SEGURO" EN CELULAR: NO TAPA EL TÍTULO ===== */
+@media(max-width:760px){
+  .hero{gap:18px}
+  .sello{position:static;justify-self:end;width:auto;height:auto;margin:0;padding:6px 14px;border-radius:999px;flex-direction:row;gap:5px;transform:none;animation:none;font-size:.85rem}
+  .sello strong{font-size:.95rem}
+}
