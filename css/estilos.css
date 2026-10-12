@@ -152,3 +152,22 @@ h1,h2,h3,p{overflow-wrap:anywhere}
 
 /* ===== SERVICIOS EN DOS COLUMNAS ===== */
 .tarjetas.dos{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+
+
+/* ===== VIDEO DESTACADO EN LA PORTADA ===== */
+.video-wrap{display:flex;flex-direction:column;gap:10px}
+.video-aviso{margin:0;font-family:var(--letra-titulos);font-weight:700;font-size:.95rem;line-height:1.2;text-align:center}
+.video-aviso .flecha{display:block;font-size:1.5rem;animation:rebote 1.2s ease-in-out infinite}
+@keyframes rebote{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.video-card{position:relative;display:block;width:100%;cursor:pointer;font:inherit;transform:rotate(-3deg);transition:transform .25s}
+.video-card:hover,.video-card:focus-visible{transform:rotate(-1deg) scale(1.04);outline:none}
+.video-card video{display:block;width:100%;height:auto;border-radius:12px;background:#000;pointer-events:none}
+.video-card .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--acento);color:#fff;border:3px solid var(--oscuro);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.video-card .tag-video{position:absolute;left:16px;right:16px;bottom:16px;background:var(--acento);color:#fff;padding:4px 10px;border-radius:999px;font-weight:800;font-size:.8rem;text-align:center}
+
+/* Video en pantalla completa */
+.visor{position:fixed;inset:0;z-index:2147483200;display:none;align-items:center;justify-content:center;background:rgba(20,5,10,.95)}
+.visor.abierto{display:flex}
+.visor video{width:100vw;height:100vh;object-fit:contain;background:#000}
+.visor .cerrar{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:2;width:48px;height:48px;border-radius:50%;border:3px solid #fff;background:var(--acento);color:#fff;font-size:1.5rem;font-weight:800;cursor:pointer}
+@media(max-width:600px){.video-aviso{font-size:.8rem}}
