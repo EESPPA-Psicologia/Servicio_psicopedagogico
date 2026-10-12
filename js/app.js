@@ -37,9 +37,48 @@
     document.body.appendChild(a);
   }
 
+  function visor(){
+    var abrir=document.getElementById('abrirVideo');
+    if(!abrir){return;}
+    var fuente=abrir.getAttribute('data-video');
+    var caja=document.createElement('div');
+    caja.className='visor';
+    caja.setAttribute('role','dialog');
+    caja.setAttribute('aria-modal','true');
+    caja.setAttribute('aria-label','Video por el Día de la Salud Mental');
+    caja.innerHTML='<button class="cerrar" type="button" aria-label="Cerrar video">✕</button><video controls playsinline></video>';
+    document.body.appendChild(caja);
+    var video=caja.querySelector('video');
+    var cerrar=caja.querySelector('.cerrar');
+
+    function abrirVisor(){
+      video.src=fuente;
+      caja.classList.add('abierto');
+      document.body.style.overflow='hidden';
+      var p=video.play();
+      if(p&&p.catch){p.catch(function(){});}
+      cerrar.focus();
+    }
+    function cerrarVisor(){
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+      caja.classList.remove('abierto');
+      document.body.style.overflow='';
+      abrir.focus();
+    }
+    abrir.addEventListener('click',abrirVisor);
+    cerrar.addEventListener('click',cerrarVisor);
+    caja.addEventListener('click',function(e){if(e.target===caja){cerrarVisor();}});
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&caja.classList.contains('abierto')){cerrarVisor();}
+    });
+  }
+
   function iniciar(){
     movimiento();
     whatsapp();
+    visor();
   }
 
   if(document.readyState==='loading'){
