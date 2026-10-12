@@ -171,3 +171,9 @@ h1,h2,h3,p{overflow-wrap:anywhere}
 .visor video{width:100vw;height:100vh;object-fit:contain;background:#000}
 .visor .cerrar{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:2;width:48px;height:48px;border-radius:50%;border:3px solid #fff;background:var(--acento);color:#fff;font-size:1.5rem;font-weight:800;cursor:pointer}
 @media(max-width:600px){.video-aviso{font-size:.8rem}}
+
+
+/* ===== VIDEO DEBAJO DE LA ACUARELA Y EL LOGO ===== */
+.hero-img .video-wrap{grid-column:1 / -1}
+.video-card{transform:rotate(-1.5deg)}
+.video-card:hover,.video-card:focus-visible{transform:rotate(0) scale(1.03)}
